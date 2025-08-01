@@ -1,0 +1,291 @@
+/* Material Design CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Material Design Color Palette */
+  --primary-color: hsl(207, 90%, 54%);
+  --primary-dark: hsl(207, 90%, 44%);
+  --secondary-color: hsl(338, 100%, 43%);
+  --success-color: hsl(122, 39%, 49%);
+  --warning-color: hsl(36, 100%, 50%);
+  --error-color: hsl(4, 90%, 58%);
+  --background-color: hsl(0, 0%, 98%);
+  --surface-color: hsl(0, 0%, 100%);
+  --text-primary: hsl(0, 0%, 13%);
+  --text-secondary: hsl(0, 0%, 46%);
+  --border-color: hsl(0, 0%, 88%);
+  --hover-overlay: hsla(0, 0%, 0%, 0.04);
+  --focus-overlay: hsla(207, 90%, 54%, 0.12);
+  
+  /* Shadows */
+  --shadow-1: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%, 0.24);
+  --shadow-2: 0 2px 4px hsla(0, 0%, 0%, 0.14), 0 3px 4px hsla(0, 0%, 0%, 0.12), 0 1px 5px hsla(0, 0%, 0%, 0.2);
+  
+  /* Border Radius */
+  --radius: 4px;
+  --radius-large: 8px;
+  --radius-pill: 16px;
+}
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.typography-h4 {
+  font-size: 2.125rem;
+  font-weight: 400;
+  line-height: 1.235;
+}
+
+.typography-h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.334;
+}
+
+.typography-h6 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.typography-subtitle1 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.typography-body1 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.typography-body2 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.43;
+}
+
+.typography-caption {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.66;
+  color: var(--text-secondary);
+}
+
+/* Material UI Component Styles */
+.MuiAppBar-root {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  box-shadow: var(--shadow-2) !important;
+}
+
+.MuiPaper-root {
+  background-color: var(--surface-color) !important;
+  box-shadow: var(--shadow-1) !important;
+}
+
+.MuiCard-root {
+  border-radius: var(--radius) !important;
+  margin-bottom: 24px !important;
+}
+
+.MuiButton-root {
+  text-transform: uppercase !important;
+  letter-spacing: 0.02857em !important;
+  font-weight: 500 !important;
+  border-radius: var(--radius) !important;
+}
+
+.MuiButton-contained {
+  box-shadow: var(--shadow-1) !important;
+}
+
+.MuiButton-contained:hover {
+  box-shadow: var(--shadow-2) !important;
+}
+
+.MuiTextField-root {
+  margin-bottom: 16px !important;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: var(--radius) !important;
+}
+
+.MuiChip-root {
+  font-weight: 500 !important;
+}
+
+.MuiTableCell-head {
+  background-color: hsl(0, 0%, 96%) !important;
+  font-weight: 500 !important;
+}
+
+/* Custom Material Design Classes */
+.mui-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.mui-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.mui-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mui-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mui-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mui-card-stats {
+  text-align: center;
+  padding: 24px;
+}
+
+.mui-stat-number {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.mui-stat-label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.mui-success-message {
+  background-color: hsla(122, 39%, 49%, 0.1);
+  color: var(--success-color);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+  border-left: 4px solid var(--success-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mui-url-item {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.mui-url-info {
+  flex: 1;
+}
+
+.mui-url-short {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.mui-url-short:hover {
+  text-decoration: underline;
+}
+
+.mui-url-long {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  word-break: break-all;
+  margin-bottom: 8px;
+}
+
+.mui-url-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.mui-url-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mui-container {
+    padding: 16px;
+  }
+  
+  .mui-grid-2,
+  .mui-grid-3,
+  .mui-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .mui-url-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .mui-url-actions {
+    align-self: stretch;
+    justify-content: flex-end;
+  }
+  
+  .mui-url-meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Hide Material-UI default styles that conflict */
+.MuiCssBaseline-root {
+  background-color: var(--background-color) !important;
+}
