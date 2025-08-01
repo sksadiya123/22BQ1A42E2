@@ -14,7 +14,6 @@ A full stack React + Node.js app that lets users shorten URLs and view analytics
 ## 🛠️ Tech Stack
 - Frontend: React.js + Material UI
 - Backend: Node.js + Express
-- Logging API: `http://20.244.56.144/evaluation-service/logs`
 
 ## 📄 Logging Example
 ```js
